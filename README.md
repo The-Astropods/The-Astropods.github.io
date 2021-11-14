@@ -1,2 +1,2 @@
 # The-Astropods.github.io
-The official website for The Astropods
+Find us here! - https://the-astropods.github.io
