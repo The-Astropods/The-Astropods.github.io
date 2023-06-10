@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Astropods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursorOutline"></div>
+    <div class="cursor-dot"></div>
+    <img src="space-probe.jpg" alt="" id="first">
+    <img src="science.jpg" alt="" id="second">
+    <img src="cosmos.jpg" alt="" id="third">
+    <img src="arrow-black.svg" alt="" id="arrow-black">
+    <img src="arrow-black.svg" alt="" id="arrow-black-two">
+    <img src="play.svg" alt="" id="play">
+    <img src="read.svg" alt="" id="read">
+    <div class="navbar">
+        <img src="logo.svg" alt="">
+        <a onclick="navbarOpen();">
+            <img src="hamburger.svg" alt="" style="height:4vh;">
+        </a>
+        <div class="menu">
+            <ul>
+                <li><a onclick="goToSection('hero');">Home</a></li>
+                <li><a onclick="goToSection('section-2');">About</a></li>
+                <li><a onclick="goToSection('section-4');">Videos</a></li>
+                <li><a onclick="goToSection('section-5');">Articles</a></li>
+                <li><a href="https://www.linkedin.com/company/theastropods">Team</a></li>
+                <li><a onclick="goToSection('section-7');">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero" id="hero">
+        <h1>We are <b>your</b> <mark id="first-mark">Space Probe</mark> to the <mark id="second-mark">science</mark> of the <mark id="third-mark">cosmos</mark></h1>
+        <a onmouseenter="document.querySelector('.cursorOutline').style.opacity = 0; document.querySelector('.cursor-dot').style.opacity=0;" onmouseleave="document.querySelector('.cursorOutline').style.opacity = 1; document.querySelector('.cursor-dot').style.opacity=1;" onclick="document.getElementById('section-2').scrollIntoView(true);" class="button">Why?</a>
+    </div>
+    <div class="why" id="section-2">
+        <h1>Because we share the <b>Latest, Cutting Edge Research.</b></h1>
+        <a onclick="document.getElementById('section-3').scrollIntoView(true);"><img src="arrow.svg" alt=""></a>
+    </div>
+    <div class="topics" id="section-3">
+        <h1 id="line-one">Astrophysics. General Relativity.</h1>
+        <h1 id="line-two">Space Technology. Aerospace.</h1>
+        <h1 id="line-three">Cosmology. Quantum Mechanics</h1>
+        <a onclick="document.getElementById('section-4').scrollIntoView(true);">How?</a>
+    </div>
+    <div class="videos" id="section-4">
+        <h1>Through <b>videos</b></h1>
+        <div class="video-grid">
+            <div class="cell">
+                <a onmouseenter="showFeaturedText();" onmouseleave="fadeText();" href="https://www.youtube.com/watch?v=5nFcCTkuB8M"><img src="featured.jpg" alt=""></a>
+            </div>
+            <div class="cell">
+                <a onmouseenter="showViewedText();" onmouseleave="fadeText();" href="https://www.youtube.com/watch?v=lgGpaFmJidM"><img src="viewed.jpg" alt=""></a>
+            </div>
+            <div class="cell">
+                <a onmouseenter="showRecentText();" onmouseleave="fadeText();" href="https://www.youtube.com/watch?v=PZyvpkjzPqE"><img src="recent.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="details-grid">
+            <div class="text">
+                <h2>Something</h2>
+                <p>This is the title of the video</p>
+            </div>
+            <a onclick="document.getElementById('section-5').scrollIntoView(true);"><img src="arrow.svg" alt=""></a>
+        </div>
+    </div>
+    <div class="articles" id="section-5">
+        <div class="cell">
+            <h1>Through <b>articles</b></h1>
+            <h2>Title of article here</h2>
+            <p>One line text about the article</p>
+        </div>
+        <div class="cell" id="article-image-cell">
+            <a onmouseenter="showArticle1Text();" onmouseleave="fadeText();" href="https://www.linkedin.com/pulse/astronomys-golden-age-could-come-end-theastropods/"><img src="article-1.jpg" alt=""></a>
+            <a onmouseenter="showArticle2Text();" onmouseleave="fadeText();" href="https://www.linkedin.com/pulse/33-years-hubble-theastropods/"><img src="article-2.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="quote" id="section-6">
+        <h1>RJCHDSLK<mark onmouseenter="changeBackground('background-2.jpg');" onmouseleave="reverseBackground();">SOMEWHERE</mark>DJGJH<mark onmouseenter="changeBackground('background-3.jpg');" onmouseleave="reverseBackground();">SOMETHING</mark>DKGKY<mark onmouseenter="changeBackground('background-4.jpg');" onmouseleave="reverseBackground();">INCREDIBLE</mark>BPWNS<mark onmouseenter="changeBackground('background-5.jpg');" onmouseleave="reverseBackground();">IS</mark>DPTJFJH<mark onmouseenter="changeBackground('background-6.jpg');" onmouseleave="reverseBackground();">WAITING</mark>QPTNF<mark onmouseenter="changeBackground('background-7.jpg');" onmouseleave="reverseBackground();">TO</mark>RPOVC<mark onmouseenter="changeBackground('background-8.jpg');" onmouseleave="reverseBackground();">BE</mark>GKTPH<mark onmouseenter="changeBackground('background-9.jpg');" onmouseleave="reverseBackground();">KNOWN</mark></h1>
+        <h2><i>Hover over bold text!</i></h2>
+    </div>
+    <div class="footer" id="section-7">
+        <div class="footer-grid">
+            <div class="cell">
+                <h1>Let's Get In Touch.</h1>
+                <a href="mailto:theastropods@gmail.com"><h2>theastropods@gmail.com</h2></a>
+            </div>
+            <div class="cell" id="links-grid">
+                <div class="inner-cell">
+                    <h3>Socials</h3>
+                    <a href="https://www.youtube.com/@theastropods/">YouTube</a>
+                    <a href="https://www.linkedin.com/company/theastropods/">LinkedIn</a>
+                    <a href="https://twitter.com/TheAstropods">Twitter</a>
+                    <a href="https://patreon.com/theastropods/">Patreon</a>
+                </div>
+                <div class="inner-cell">
+                    <h3>Links</h3>
+                    <a onclick="document.getElementById('section-2').scrollIntoView(true);">About</a>
+                    <a onclick="document.getElementById('section-4').scrollIntoView(true);">Videos</a>
+                    <a onclick="document.getElementById('section-5').scrollIntoView(true)">Articles</a>
+                    <a href="https://www.linkedin.com/company/theastropods">Team</a>
+                </div>
+            </div>
+        </div>
+        <h3 class="copyright">COPYRIGHT &copy; 2021-2023. ALL RIGHTS RESERVED.</h3>
+        <h3 class="credits">Designed and Developed by Rudra Sekhri</h3>
+        <p class="acknowledgement"><i>We acknowledge the traditional owners of the land on which this organisation is based, the Wurundjeri people of the Kulin Nation of Australia</i></p>
+    </div>
+    <script src="cursor.js"></script>
+    <script src="video_text.js"></script>
+    <script src="scroll_text.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
