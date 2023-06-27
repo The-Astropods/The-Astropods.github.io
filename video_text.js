@@ -65,8 +65,8 @@ function showArticle1Text() {
 function showArticle2Text() {
     fadeText();
     setTimeout(function() {
-        article_title.innerHTML = "33 Years for Hubble";
-        article_paragraph.innerHTML = "The Hubble Space Telescope, or simply called Hubble, has fundamentally changed the course of astronomy, not only being the first space telescope, but also being the ideal telescope for astronomers due to its astonishingly high resolution.";
+        article_title.innerHTML = "Unravelling the Enigma of Black Holes";
+        article_paragraph.innerHTML = "Black holes remain an enigmatic phenomenon in the vast expanse of space, fueling the imagination of individuals worldwide. The study of black holes has already fostered a more profound comprehension of the universe's mechanisms.";
         article_title.style.opacity = 1;
         article_paragraph.style.opacity = 1;
         title_element.style.transform = "translateY(0vh)";
