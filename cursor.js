@@ -20,8 +20,10 @@ function cursor(e) {
     mouseCursor.style.top = e.pageY + 'px';
     mouseCursor.style.left = e.pageX + 'px';
 
-    mouseOutline.style.top = e.pageY + 'px';
-    mouseOutline.style.left = e.pageX + 'px';
+    mouseOutline.animate({
+      top:e.pageY + 'px',
+      left:e.pageX + 'px', 
+    }, duration=2000, fill='forwards')
 }
 
 mark1.addEventListener('mouseenter', (e) => {

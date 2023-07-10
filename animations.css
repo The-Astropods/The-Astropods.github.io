@@ -1,0 +1,202 @@
+.loading {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:50;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    pointer-events: none;
+}
+
+.loading .screen {
+    width:80%;
+    height:80vh;
+    padding:10vh 10%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.screen h1 {
+    font-size:6vw;
+    text-transform:uppercase;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height:0.9;
+}
+
+.screen span {
+    display: inline-block;
+    transform: translateY(100px);
+    transition:transform 0.5s ease-in-out;
+}
+
+.screen-black {
+    background:black;
+    color:white;
+}
+
+.screen-bg {
+    background: url('loading-bg.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    transform: translateY(-200vh);
+    animation: pullDownBG 1s ease forwards;
+    animation-delay:0.75s;
+}
+
+.screen-white {
+    background:white;
+    color:black;
+    transform: translateY(-300vh);
+    animation: pullDown 1s ease forwards;
+    animation-delay:2s;
+}
+
+.screen-black span {
+    animation: liftUp 1s ease forwards;
+}
+
+.screen-bg span {
+    animation: liftUp 1s ease forwards;
+    animation-delay:1.25s;
+}
+
+.screen-white span {
+    animation: liftUp 1s ease forwards;
+    animation-delay:calc((0.1s * var(--index)) + 2.6s);
+}
+
+#last {
+    transform: translateY(-400vh);
+    animation: pullDownLast 1s ease forwards;
+    animation-delay:3.75s;
+    background:black;
+}
+
+.loading {
+    animation:fadeAway 0.05s ease forwards;
+    animation-delay:4.75s;
+}
+
+.hero h1 {
+    opacity:0;
+    transform:scale(1.1) translate(50px, 50px);
+    animation: heroAnimationText 2s ease forwards;
+    animation-delay: 4.75s;
+}
+
+.hero a {
+    opacity:0;
+    transform:translateY(50px);
+    animation: heroAnimationButton 1s ease forwards;
+    animation-delay:6s;
+}
+
+.navbar img, .navbar > a {
+    opacity:0;
+    transform:translateY(-50px);
+    animation: heroAnimationNavbar 1s ease forwards;
+}
+
+.navbar img {
+    animation-delay:5s;
+}
+
+.navbar a {
+    animation-delay:5.25s;
+}
+
+@keyframes liftUp {
+    from {
+        transform:translateY(100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pullDownBG {
+    from {
+        transform:translateY(-200vh);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes pullDown {
+    from {
+        transform:translateY(-300vh);
+    }
+
+    to {
+        transform: translateY(-200vh);
+    }
+}
+
+@keyframes pullDownLast {
+    from {
+        transform:translateY(-400vh);
+    }
+
+    to {
+        transform: translateY(-300vh);
+    }
+}
+
+@keyframes fadeAway {
+    from {
+        opacity:1;
+    }
+
+    to {
+        opacity:0;
+    }
+}
+
+@keyframes heroAnimationText {
+    0% {
+        opacity:0;
+        transform:scale(1.1) translate(50px, 50px);
+    }
+
+    50% {
+        opacity:1;
+        transform:scale(1.1) translate(50px, 0);
+    }
+
+    100% {
+        opacity:1;
+        transform:scale(1) translate(0, 0);
+    }
+}
+
+@keyframes heroAnimationButton {
+    from {
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+@keyframes heroAnimationNavbar {
+    from {
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
